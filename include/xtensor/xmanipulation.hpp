@@ -78,8 +78,9 @@ namespace xt
     template <class E>
     auto flip(E&& e, std::size_t axis);
 
-    template <std::ptrdiff_t N = 1, class E>
-    auto rot90(E&& e, const std::array<std::ptrdiff_t, 2>& axes = {0, 1});
+    // NVCC can't compile this as of 11.1
+    // template <std::ptrdiff_t N = 1, class E>
+    // auto rot90(E&& e, const std::array<std::ptrdiff_t, 2>& axes = {0, 1});
 
     template<class E>
     auto roll(E&& e, std::ptrdiff_t shift);
